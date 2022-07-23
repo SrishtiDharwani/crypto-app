@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+display: flex;
+  background-color: #52557c;
+  margin: 30px;
+  border-radius: 1.5rem;
+  /* opacity: 0.5; */
+  height: 70px;
+  width: 90%;
+  color: aliceblu;
+}
