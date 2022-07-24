@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import classes from "./Individual.module.css";
 
 function Individual() {
   const [details, setDetails] = useState(null);
@@ -43,18 +44,18 @@ function Individual() {
 
   if (loading) {
     return (
-      <section>
-        <p>Getting data...</p>
-      </section>
+      <div className={classes.error}>
+        <p className={classes.text}>Getting data...</p>
+      </div>
     );
   }
 
   if (er) {
     console.log(er);
     return (
-      <section>
-        <p>{er}</p>
-      </section>
+      <div className={classes.error}>
+        <p className={classes.text}>{er}</p>
+      </div>
     );
   }
 

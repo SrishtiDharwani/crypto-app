@@ -1,19 +1,46 @@
 .search {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .searchbar {
-    height:35px;
-    width:500px;
-    border-radius: 10px;
-    margin-right: 20px;
-    margin-bottom: 30px;
-
+  height: 35px;
+  width: 480px;
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  padding-left: 20px;
 }
 
 .icon {
-    height:35px;
-    width:35px;
+  height: 35px;
+  width: 35px;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 150px;
+  /* border: 1px solid white; */
+  background-color: #1c2548;
+  border-radius: 1rem;
+ margin:300px;
+}
+
+.notFound {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 150px;
+  /* border: 1px solid white; */
+  background-color: #1c2548;
+  border-radius: 1rem;
+ margin:100px;
+}
+
+.text {
+    margin-top: 60px;
+    font-size: 20px;
 }

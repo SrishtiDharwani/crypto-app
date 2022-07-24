@@ -27,6 +27,9 @@ code {
   opacity: 0.9;
 }
 .card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   background-color: #040429;
   color: white;
   height: 80%;

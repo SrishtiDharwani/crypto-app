@@ -50,22 +50,26 @@ function Default() {
 
   if (isLoading) {
     return (
-      <section>
-        <p>Getting data...</p>
-      </section>
+      <div className={classes.error}>
+        <p className={classes.text}>Getting data...</p>
+      </div>
     );
   }
 
   if (err) {
     console.log(err);
     return (
-      <section>
-        <p>{err}</p>
-      </section>
+      <div className={classes.error}>
+        <p className={classes.text}>{err}</p>
+      </div>
     );
   }
 
-  let data = <p>No coins found. Try entering something else!</p>;
+  let data = (
+    <div className={classes.notFound}>
+      <p className={classes.text}>No coins found. Try entering something else!</p>
+    </div>
+  );
   if (filteredData.length !== 0) {
     data = filteredData.map((coin) => (
       <Row
