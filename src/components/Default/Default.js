@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import classes from "./Default.module.css";
 import Row from "../Row/Row";
+import Header from "../Header/Header";
 import refresh from "../../assets/search.png";
 
 function Default() {
@@ -20,7 +21,7 @@ function Default() {
 
   const refreshHandler = (event) => {
     event.preventDefault();
-    window.location.reload(); 
+    window.location.reload();
   };
 
   useEffect(() => {
@@ -64,23 +65,24 @@ function Default() {
     );
   }
 
-let data=<p>No coins found. Try entering something else!</p>
-if(filteredData.length!==0) {
-  data = filteredData.map((coin) => (
-    <Row
-      id={coin.id}
-      symbol={coin.symbol}
-      name={coin.name}
-      image={coin.image}
-      current_price={coin.current_price}
-      market_cap={coin.market_cap}
-      priceChange={coin.price_change_percentage_24h}
-    />
-  ));
-}
-  
+  let data = <p>No coins found. Try entering something else!</p>;
+  if (filteredData.length !== 0) {
+    data = filteredData.map((coin) => (
+      <Row
+        id={coin.id}
+        symbol={coin.symbol}
+        name={coin.name}
+        image={coin.image}
+        current_price={coin.current_price}
+        market_cap={coin.market_cap}
+        priceChange={coin.price_change_percentage_24h}
+      />
+    ));
+  }
+
   return (
     <React.Fragment>
+      <Header />
       <div className={classes.search}>
         <input
           className={classes.searchbar}

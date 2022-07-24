@@ -5,12 +5,12 @@
 
 .row {
 display: flex;
-  background-color: #52557c;
+  background-color: #1c2548;
+  /* background: rgba(0,0,0,.2); */
   margin: 15px;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   /* opacity: 0.5; */
   height: 50px;
-  width: 70%;
-  color: aliceblu;
+  width: 80%;
   padding: 10px;
 }
