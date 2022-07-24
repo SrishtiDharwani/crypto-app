@@ -1,0 +1,20 @@
+
+.search {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.searchbar {
+    height:35px;
+    width:500px;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+
+}
+
+.icon {
+    height:35px;
+    width:35px;
+}

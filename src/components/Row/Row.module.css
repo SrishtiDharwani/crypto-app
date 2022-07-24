@@ -6,10 +6,11 @@
 .row {
 display: flex;
   background-color: #52557c;
-  margin: 30px;
+  margin: 15px;
   border-radius: 1.5rem;
   /* opacity: 0.5; */
-  height: 70px;
-  width: 90%;
+  height: 50px;
+  width: 70%;
   color: aliceblu;
+  padding: 10px;
 }

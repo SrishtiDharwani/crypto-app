@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Row.module.css";
 
-function Row({
+const Row=({
   id,
   symbol,
   name,
@@ -9,7 +9,11 @@ function Row({
   current_price,
   market_cap,
   priceChange,
-}) {
+})=> {
+
+  const coinHandler=(event)=>{
+    event.preventDefault();
+  }
 
   return (
     <div className={classes.container}>
@@ -20,12 +24,11 @@ function Row({
         <div>{current_price}</div> 
         <div>{market_cap}</div>
         <div>{priceChange}</div>
-        <button>Know more></button>
+        <button onClick={coinHandler}>Know more</button>
       </div>
     </div>
   
   );
   
-}
-
+};
 export default Row;
