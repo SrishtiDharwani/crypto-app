@@ -3,6 +3,7 @@ import classes from "./Default.module.css";
 import Row from "../Row/Row";
 import Header from "../Header/Header";
 import refresh from "../../assets/search.png";
+import { Helmet } from "react-helmet";
 
 function Default() {
   const [coins, setCoins] = useState([]);
@@ -67,7 +68,9 @@ function Default() {
 
   let data = (
     <div className={classes.notFound}>
-      <p className={classes.text}>No coins found. Try entering something else!</p>
+      <p className={classes.text}>
+        No coins found. Try entering something else!
+      </p>
     </div>
   );
   if (filteredData.length !== 0) {
@@ -86,6 +89,9 @@ function Default() {
 
   return (
     <React.Fragment>
+    <Helmet>
+      <title>Crypto | Home</title>
+    </Helmet>
       <Header />
       <div className={classes.search}>
         <input

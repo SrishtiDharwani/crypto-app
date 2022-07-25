@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import classes from "./Individual.module.css";
-import linkImg from "../../assets/export.png";
+import { Helmet } from "react-helmet";
 
 function Individual() {
   const [details, setDetails] = useState(null);
@@ -57,11 +57,14 @@ function Individual() {
       </div>
     );
   }
-
+  let query = coinId.charAt(0).toUpperCase() + coinId.slice(1);
   let info = <p>No data found</p>;
   if (details) {
     return (
       <div className={classes.fcontainer}>
+        <Helmet>
+          <title>Crypto | {query}</title>
+        </Helmet>
         <div className={classes.data}>
           <h1>{details.name}</h1>
           <img
