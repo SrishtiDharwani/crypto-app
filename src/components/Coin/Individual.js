@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import classes from "./Individual.module.css";
+import linkImg from "../../assets/export.png";
 
 function Individual() {
   const [details, setDetails] = useState(null);
@@ -15,7 +16,6 @@ function Individual() {
     event.preventDefault();
     navigate("/", { replace: true });
   };
-
 
   const fetchInfo = useCallback(() => {
     setLoading(true);
@@ -35,12 +35,11 @@ function Individual() {
       setLoading(false);
       setEr(error.message);
     });
-  },[coinId]);
+  }, [coinId]);
 
   useEffect(() => {
     fetchInfo();
   }, [fetchInfo]);
-
 
   if (loading) {
     return (
@@ -62,28 +61,57 @@ function Individual() {
   let info = <p>No data found</p>;
   if (details) {
     return (
-      <div>
-        <h1>{details.name}</h1>
-        <img src={details.image.large} alt="img"></img>
-        <div>{details.symbol}</div>
-        <a
-          href={details.links.homepage[0]}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          site
-        </a>
-        <div>{details.market_data.current_price.usd}</div>
-        <div>{details.market_data.market_cap.usd}</div>
-        <div>{details.market_data.total_volume.usd}</div>
-        <div>{details.market_data.high_24h.usd}</div>
-        <div>{details.market_data.low_24h.usd}</div>
-        <p>{details.tickers[6].trust_score}</p>
-        <button onClick={returnHandler}>Go back</button>
+      <div className={classes.fcontainer}>
+        <div className={classes.data}>
+          <h1>{details.name}</h1>
+          <img
+            className={classes.img}
+            src={details.image.large}
+            alt="img"
+          ></img>
+          <div className={classes.coin}>
+            {/* <img src={details.image.large} alt="img"></img> */}
+            {/* <h1>{details.name}</h1> */}
+            <div className={classes.symbol}>{details.symbol}</div>
+            <p>
+              Current price: ${" "}
+              {details.market_data.current_price.usd.toFixed(2)}
+            </p>
+            <p>Market cap: $ {details.market_data.market_cap.usd.toFixed(2)}</p>
+            <p>
+              Total volume: $ {details.market_data.total_volume.usd.toFixed(2)}
+            </p>
+            <p>24 Hour high: $ {details.market_data.high_24h.usd.toFixed(2)}</p>
+            <p>24 Hour low: $ {details.market_data.low_24h.usd.toFixed(2)}</p>
+            {details.tickers[6].trust_score === "green" ? (
+              <p style={{ color: "green" }}>
+                Trust score: {details.tickers[6].trust_score}
+              </p>
+            ) : (
+              <p style={{ color: "red" }}>
+                Trust score: {details.tickers[6].trust_score}
+              </p>
+            )}
+
+            <div className={classes.controls}>
+              <a
+                className={classes.button1}
+                href={details.links.homepage[0]}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit website
+              </a>
+              <button className={classes.button2} onClick={returnHandler}>
+                Go back
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     );
-    } else {
-      return <div>{info}</div>;
+  } else {
+    return <div>{info}</div>;
   }
 }
 

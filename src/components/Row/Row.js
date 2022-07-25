@@ -22,8 +22,7 @@ const Row = ({
             <p className={classes.current}>
               $ {current_price.toLocaleString()}
             </p>
-            <p className={classes.cap}>{market_cap.toFixed(2)}</p>
-            <p className={classes.change}>{priceChange.toFixed(2)}%</p>
+            {/* <p className={classes.change}>{priceChange.toFixed(2)}%</p> */}
             {priceChange < 0 ? (
               <p className={`${classes.change} ${classes.red}`}>
                 {priceChange.toFixed(2)}%
@@ -33,6 +32,7 @@ const Row = ({
                 {priceChange.toFixed(2)}%
               </p>
             )}
+            <p className={classes.cap}>$ {market_cap.toFixed(2)}</p>
             <Link to={`/${id}`}>
               <button className={classes.button} type="button">Know more</button>
             </Link>

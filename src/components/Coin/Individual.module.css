@@ -1,16 +1,118 @@
 .error {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    height: 150px;
-    /* border: 1px solid white; */
-    background-color: #1c2548;
-    border-radius: 1rem;
-   margin:300px;
-  }
-  
-  .text {
-      margin-top: 60px;
-      font-size: 20px;
-  }
-  
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 150px;
+  /* border: 1px solid white; */
+  background-color: #1c2548;
+  border-radius: 1rem;
+  margin: 300px;
+}
+
+.text {
+  margin-top: 60px;
+  font-size: 20px;
+}
+
+.fcontainer {
+  background-image: url("https://902558.smushcdn.com/2161880/wp-content/uploads/2022/04/1661-scaled-e1649434277532-1140x570.jpg?lossy=1&strip=1&webp=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+}
+
+.data {
+  background-color: black;
+  /* display: flex; */
+  justify-content: center;
+  /* flex-direction: column; */
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 40vw;
+  opacity: 0.8;
+}
+
+.coin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 60px;
+  padding-right: 60px;
+  text-align: left;
+}
+.data h1 {
+  margin-left: 60px;
+  padding-right: 60px;
+  font-weight: 900;
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.img {
+  margin-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 30px;
+  height: 200px;
+  width: 200px;
+}
+.symbol {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 0;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.coin p {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 0;
+}
+.coins a {
+  font-size: 30px;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+}
+
+.button1 {
+  display: flex;
+  /* width: 165px */
+  flex: 100%;
+  height: 50px;
+  background: #4e9caf;
+    margin: 20px;
+    padding-top:8px;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bolder;
+  font-size: 25px;
+  text-decoration: none;
+  /* line-height: 25px; */
+  margin-left: 0;
+}
+.button2 {
+  display: flex;
+  /* width: 165px */
+  flex: 100%;
+  height: 65x;
+  background: #4e9caf;
+  padding-top: 10px;
+  margin: 20px;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bolder;
+  font-size: 25px;
+  text-decoration: none;
+  /* line-height: 25px; */
+  margin-right: 0;
+  cursor: pointer;
+}
