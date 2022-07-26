@@ -16,13 +16,14 @@
 
 .fcontainer {
   background-image: url("https://902558.smushcdn.com/2161880/wp-content/uploads/2022/04/1661-scaled-e1649434277532-1140x570.jpg?lossy=1&strip=1&webp=1");
+  border-radius: 0.8rem;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  height: 100vh;
+  height: 96vh;
 }
 
 .data {
@@ -56,8 +57,8 @@
   margin-left: 60px;
   padding-right: 60px;
   padding-bottom: 30px;
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
 }
 .symbol {
   font-size: 24px;
