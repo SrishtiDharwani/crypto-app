@@ -21,7 +21,7 @@ code {
 }
 
 .main {
-  background-color: #1c2548;
+  background-color: #2e385d;
   display: flex;
   justify-content: center;
   opacity: 0.9;
@@ -31,7 +31,7 @@ code {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: #040429;
+  background-color: #20204d;
   color: white;
   height: 80%;
   width: 98%;

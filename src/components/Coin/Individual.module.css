@@ -4,7 +4,8 @@
   text-align: center;
   height: 150px;
   /* border: 1px solid white; */
-  background-color: #1c2548;
+  /* background-color: #1c2548; */
+  background-color: #2e385d;
   border-radius: 1rem;
   margin: 300px;
 }
@@ -27,7 +28,7 @@
 }
 
 .data {
-  background-color: black;
+  background-color:rgb(35, 35, 67);
   /* display: flex; */
   justify-content: center;
   /* flex-direction: column; */
