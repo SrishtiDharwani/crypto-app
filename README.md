@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Deployed:
 
-To view the deployed app [click here].(https://crypto-jj0qgxymo-srishtidharwani.vercel.app/)
+To view the deployed app [click here](https://crypto-jj0qgxymo-srishtidharwani.vercel.app/).
 
 ## Available Scripts
 
