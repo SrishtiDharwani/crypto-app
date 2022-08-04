@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Deployed:
+
+To view the deployed app [click here].(https://crypto-jj0qgxymo-srishtidharwani.vercel.app/)
+
 ## Available Scripts
 
 In the project directory, you can run:
